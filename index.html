@@ -3,64 +3,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Site Vitrine</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Portfolio CZERNIAK Hugo</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800 font-sans">
   <!-- Header -->
-  <header>
-    <nav>
-      <h1>Mon Entreprise</h1>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="bg-gray-900 text-white py-10 text-center">
+    <h1 class="text-4xl font-bold">Hugo CZERNIAK</h1>
+    <p class="mt-2 text-lg text-gray-400">Étudiant en Informatique | Passionné d'informatique</p>
   </header>
 
-  <!-- Section Accueil -->
-  <section id="accueil" class="hero">
-    <h2>Bienvenue sur notre site</h2>
-    <p>Une petite description accrocheuse de ton activité.</p>
-    <a href="#contact" class="btn">Nous contacter</a>
-  </section>
+  <!-- Navigation -->
+  <nav class="bg-gray-700 text-white py-3 flex justify-center space-x-6">
+    <a href="#about" class="hover:text-orange-400 font-semibold">À propos</a>
+    <a href="#projects" class="hover:text-orange-400 font-semibold">Projets</a>
+    <a href="#contact" class="hover:text-orange-400 font-semibold">Contact</a>
+  </nav>
 
-  <!-- Section Services -->
-  <section id="services">
-    <h2>Nos Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Service 1</h3>
-        <p>Description du service.</p>
+  <section id="parcours" class="max-w-4xl mx-auto py-16 px-6">
+    <h2 class="text-2xl font-bold mb-12 text-center text-gray-800">Mon Parcours</h2>
+
+    <div class="relative pl-12">
+      <!-- Ligne verticale -->
+      <div class="absolute top-0 left-6 w-1 h-full bg-blue-500"></div>
+
+      <!-- Étape 1 -->
+      <div class="relative mb-12 flex items-start">
+        <!-- Cercle -->
+        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
+          1
+        </div>
+        <!-- Texte -->
+        <div class="ml-6">
+          <h3 class="text-xl font-semibold text-gray-800">2021 : Bac Scientifique</h3>
+          <p class="text-gray-600 mt-2">
+            Obtention du Bac Scientifique avec mention bien, spécialités Mathématiques - NSI (Numérique et Science de l'Informatique).
+          </p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Service 2</h3>
-        <p>Description du service.</p>
+
+      <!-- Étape 2 -->
+      <div class="relative mb-12 flex items-start">
+        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
+          2
+        </div>
+        <div class="ml-6">
+          <h3 class="text-xl font-semibold text-gray-800">2021-2023 : Classe Préparatoire MPSI - MP</h3>
+          <p class="text-gray-600 mt-2">
+            Deux années de prépa axés sur la Mathématiques et la Physique au lycée Robespierre d'Arras.
+          </p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Service 3</h3>
-        <p>Description du service.</p>
+
+      <!-- Étape 3 -->
+      <div class="relative mb-12 flex items-start">
+        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
+          3
+        </div>
+        <div class="ml-6">
+          <h3 class="text-xl font-semibold text-gray-800">2023-2026 : Cycle ingénieur - Informatique et Système d'Information</h3>
+          <p class="text-gray-600 mt-2">
+            ...
+          </p>
+        </div>
       </div>
+
+      <!-- Étape 4 -->
+      <div class="relative mb-12 flex items-start">
+        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
+          4
+        </div>
+        <div class="ml-6">
+          <h3 class="text-xl font-semibold text-gray-800">2023 - Stage Développement Web</h3>
+          <p class="text-gray-600 mt-2">
+            Stage de 3 mois dans une startup web, développement d’une application front-end avec React.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Section Contact -->
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <form>
-      <input type="text" placeholder="Votre nom" required>
-      <input type="email" placeholder="Votre email" required>
-      <textarea placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
+
+
+
+  <!-- Projets -->
+  <section id="projects" class="max-w-7xl mx-auto py-16 px-6">
+    <h2 class="text-2xl font-bold mb-8 text-center">Mes projets</h2>
+    
+    <div class="flex items-center relative">
+      <!-- Bouton gauche -->
+      <button id="prev" class="absolute -left-14 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white text-3xl px-4 py-2 rounded-full hover:bg-opacity-90 z-10">
+        &#10094;
+      </button>
+
+<!-- Carrousel -->
+<div class="overflow-hidden w-full">
+  <div id="carousel-track" class="flex space-x-8 transition-transform duration-500 ease-in-out">
+
+    <!-- Card 1 -->
+    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="flex h-full">
+        <div class="w-1/2 bg-gray-200">
+          <img src="https://via.placeholder.com/400x400?text=Projet+1" alt="Projet 1" class="w-full h-full object-cover">
+        </div>
+        <div class="w-1/2 p-8 flex flex-col justify-center">
+          <h3 class="text-2xl font-semibold mb-4">Projet Portfolio Web</h3>
+          <p class="text-gray-600">
+            Création d’un site web personnel avec HTML, CSS et JavaScript. J’ai mis en pratique les concepts de responsive design et d’animation CSS.
+          </p>
+          <strong>
+            PAS À JOUR
+          </strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="flex h-full">
+        <div class="w-1/2 bg-gray-200">
+          <img src="https://via.placeholder.com/400x400?text=Projet+2" alt="Projet 2" class="w-full h-full object-cover">
+        </div>
+        <div class="w-1/2 p-8 flex flex-col justify-center">
+          <h3 class="text-2xl font-semibold mb-4">Application To-Do</h3>
+          <p class="text-gray-600">
+            Développement d’une application de gestion de tâches en React. Fonctionnalités : ajouter, supprimer et marquer les tâches comme complétées.
+          </p>
+                    <strong>
+            PAS À JOUR
+          </strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="flex h-full">
+        <div class="w-1/2 bg-gray-200">
+          <img src="https://via.placeholder.com/400x400?text=Projet+3" alt="Projet 3" class="w-full h-full object-cover">
+        </div>
+        <div class="w-1/2 p-8 flex flex-col justify-center">
+          <h3 class="text-2xl font-semibold mb-4">Bot Discord</h3>
+          <p class="text-gray-600">
+            Création d’un bot Discord en Node.js capable de répondre aux commandes, gérer des rôles et envoyer des notifications automatiques.
+          </p>
+                    <strong>
+            PAS À JOUR
+          </strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="flex h-full">
+        <div class="w-1/2 bg-gray-200">
+          <img src="https://via.placeholder.com/400x400?text=Projet+4" alt="Projet 4" class="w-full h-full object-cover">
+        </div>
+        <div class="w-1/2 p-8 flex flex-col justify-center">
+          <h3 class="text-2xl font-semibold mb-4">Jeu en Python</h3>
+          <p class="text-gray-600">
+            Développement d’un petit jeu de plateforme en Python avec Pygame. Gestion des collisions, score et niveaux.
+          </p>
+                    <strong>
+            PAS À JOUR
+          </strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="flex h-full">
+        <div class="w-1/2 bg-gray-200">
+          <img src="https://via.placeholder.com/400x400?text=Projet+5" alt="Projet 5" class="w-full h-full object-cover">
+        </div>
+        <div class="w-1/2 p-8 flex flex-col justify-center">
+          <h3 class="text-2xl font-semibold mb-4">Application Mobile</h3>
+          <p class="text-gray-600">
+            Prototype d’application mobile en Flutter pour gérer des notes et rappels. Intégration de notifications et design responsive.
+          </p>
+                    <strong>
+            PAS À JOUR
+          </strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+      <!-- Bouton droit -->
+      <button id="next" class="absolute -right-14 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white text-3xl px-4 py-2 rounded-full hover:bg-opacity-90 z-10">
+        &#10095;
+      </button>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto py-16 px-6 text-center">
+    <h2 class="text-2xl font-bold mb-6">Me contacter</h2>
+    <p class="mb-4">
+      📧 Email : <a href="mailto:hugo.czerniak@utt.fr" class="text-orange-500 hover:underline">hugo.czerniak@utt.fr</a>
+    </p>
+    <p class="mb-4">
+      🔗 LinkedIn : <a href="https://www.linkedin.com/in/HugoCnk/" target="_blank" class="text-orange-500 hover:underline">Mon LinkedIn</a>
+    </p>
+    <p>
+      💻 GitHub : <a href="https://github.com/ton-github" target="_blank" class="text-orange-500 hover:underline">Mon GitHub</a>
+    </p>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 Mon Entreprise. Tous droits réservés.</p>
+  <footer class="bg-gray-900 text-gray-400 text-center py-6">
+    <p>© 2025 Hugo CZERNIAK - Portfolio Étudiant</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    const track = document.getElementById('carousel-track');
+    const slides = track.children;
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+
+    let currentIndex = 0;
+    const gap = 32; // space-x-8 = 2rem = 32px
+
+    function updateCarousel() {
+      const cardWidth = slides[0].offsetWidth + gap;
+      const trackWidth = track.parentElement.offsetWidth;
+      
+      // Calcul du max index pour ne pas dépasser la dernière card
+      const maxIndex = slides.length - Math.floor(trackWidth / cardWidth);
+      
+      // Boucle infinie
+      if (currentIndex > maxIndex) {
+        currentIndex = 0;
+      } else if (currentIndex < 0) {
+        currentIndex = maxIndex;
+      }
+
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex++;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex--;
+      updateCarousel();
+    });
+
+    // Ajuste le carrousel si la fenêtre change de taille
+    window.addEventListener('resize', updateCarousel);
+
+  </script>
 </body>
 </html>
