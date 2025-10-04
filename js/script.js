@@ -1,0 +1,89 @@
+let currentProject = null;
+
+async function loadProjects() {
+  const res = await fetch('./projects.json');
+  const data = await res.json();
+  const projects = data.projects;
+
+  const projectList = document.getElementById("project-list");
+  projectList.innerHTML = projects.map((proj) =>
+    `<li class="cursor-pointer p-2 rounded hover:bg-gray-100" onclick="showProject('${proj.id}')">
+       ${proj.title}
+     </li>`
+  ).join("");
+
+  window.projectsData = projects;
+}
+
+function showProject(id) {
+  const proj = window.projectsData.find(p => p.id === id);
+  if (!proj) return;
+
+  // Génère le HTML des slides
+  const imageSlides = proj.images.map((img) => `
+    <div class="absolute inset-0 transition-opacity duration-700 opacity-0" data-slide>
+      <img src="${img}" class="w-full h-64 md:h-96 object-cover rounded-lg" alt="${proj.title}">
+    </div>
+  `).join("");
+
+  document.getElementById("project-details").innerHTML = `
+    <h2 class="text-2xl font-bold mb-4">${proj.title}</h2>
+
+    <div id="custom-carousel" class="relative w-full mb-4 overflow-hidden">
+      <div class="relative h-64 md:h-96">
+        ${imageSlides}
+      </div>
+      <button type="button" id="prevBtn" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white rounded-full p-2">❮</button>
+      <button type="button" id="nextBtn" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white rounded-full p-2">❯</button>
+    </div>
+
+    <p class="text-gray-700 mb-4">${proj.description}</p>
+    <h3 class="text-lg font-semibold mb-2">Compétences :</h3>
+    <ul class="flex gap-2 flex-wrap">
+      ${proj.skills.map(skill => `<li class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">${skill}</li>`).join("")}
+    </ul>
+  `;
+
+  // Initialise le carrousel custom
+  initCustomCarousel("custom-carousel", 4000);
+}
+
+// Carrousel custom simple
+function initCustomCarousel(carouselId, interval = 3000) {
+  const carousel = document.getElementById(carouselId);
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll("[data-slide]");
+  const prevBtn = carousel.querySelector("#prevBtn");
+  const nextBtn = carousel.querySelector("#nextBtn");
+
+  let current = 0;
+  let timer;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("opacity-100", i === index);
+      slide.classList.toggle("opacity-0", i !== index);
+    });
+    current = index;
+  }
+
+  function nextSlide() {
+    showSlide((current + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    showSlide((current - 1 + slides.length) % slides.length);
+  }
+
+  nextBtn.addEventListener("click", () => { nextSlide(); resetTimer(); });
+  prevBtn.addEventListener("click", () => { prevSlide(); resetTimer(); });
+
+  function startTimer() { timer = setInterval(nextSlide, interval); }
+  function resetTimer() { clearInterval(timer); startTimer(); }
+
+  showSlide(0);
+  startTimer();
+}
+
+document.addEventListener("DOMContentLoaded", loadProjects);

@@ -1,0 +1,64 @@
+{
+    "projects": [
+        {
+            "id": "p1",
+            "title": "🦠 Simulation de propagation d'un virus dans une ville",
+            "description": "",
+            "images": [
+                "./assets/images/projects/sim_virus/sv_menu.png",
+                "./assets/images/projects/sim_virus/sv_playing.png",
+                "./assets/images/projects/sim_virus/sv_unity.png"
+            ],
+            "skills": [
+                "Unity",
+                "C#",
+                "Blender"
+            ]
+        },
+        {
+            "id": "p2",
+            "title": "🌊 Simulation de fluide E-MPS en temps réelle",
+            "description": "",
+            "images": [
+                "./assets/images/projects/sim_fluide/sf_particle.jpg",
+                "./assets/images/projects/sim_fluide/sf_shader_off.jpg",
+                "./assets/images/projects/sim_fluide/sf_shader_on.jpg"
+            ],
+            "skills": [
+                "Unity",
+                "C#",
+                "Unity Shader"
+            ]
+        },
+        {
+            "id": "p3",
+            "title": "🃏 Jeu de carte 'Karmaka'",
+            "description": "",
+            "images": [
+                "./assets/images/projects/karmaka/kar_menu.png",
+                "./assets/images/projects/karmaka/kar_plateau.png",
+                "./assets/images/projects/karmaka/kar_effect.png",
+                "./assets/images/projects/karmaka/kar_save.png"
+            ],
+            "skills": [
+                "Java",
+                "MVC"
+            ]
+        },
+        {
+            "id": "p4",
+            "title": "💰 Site de gestion de patrimoine",
+            "description": "",
+            "images": [
+                "./assets/images/projects/patrimoine/pat_menu.png"
+            ],
+            "skills": [
+                "HTML",
+                "PHP",
+                "Bootstrap",
+                "MVC",
+                "SQL"
+            ]
+        }
+    ]
+}

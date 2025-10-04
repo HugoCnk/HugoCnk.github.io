@@ -1,228 +1,208 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio CZERNIAK Hugo</title>
-  <!-- Tailwind -->
+  <title>CZERNIAK Hugo Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/script.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+
+<body class="bg-gray-200 text-gray-800 font-sans">
   <!-- Header -->
-  <header class="bg-gray-900 text-white py-10 text-center">
-    <h1 class="text-4xl font-bold">Hugo CZERNIAK</h1>
-    <p class="mt-2 text-lg text-gray-400">Étudiant en Informatique | Passionné d'informatique</p>
-  </header>
+<header class="bg-gray-900 text-white py-10 text-center">
+  <h1 class="text-4xl font-bold">Hugo CZERNIAK</h1>
+  <p class="mt-2 text-lg text-gray-400">Étudiant en Informatique</p>
+
+  <a href="./assets/CV.pdf" target="_blank" 
+     class="absolute top-10 right-8 mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition">
+    Mon CV
+  </a>
+</header>
+
 
   <!-- Navigation -->
   <nav class="bg-gray-700 text-white py-3 flex justify-center space-x-6">
-    <a href="#about" class="hover:text-orange-400 font-semibold">À propos</a>
-    <a href="#projects" class="hover:text-orange-400 font-semibold">Projets</a>
-    <a href="#contact" class="hover:text-orange-400 font-semibold">Contact</a>
+    <!-- <a href="#about" class="hover:text-orange-400 font-semibold">À propos</a> -->
+    <a href="#parcours" class="hover:text-orange-400 font-semibold">Mon parcours</a>
+    <a href="#experiences" class="hover:text-orange-400 font-semibold">Mes expériences</a>
+    <a href="#projects" class="hover:text-orange-400 font-semibold">Mes projets</a>
+    <a href="#contact" class="hover:text-orange-400 font-semibold">Me contacter</a>
   </nav>
 
-  <section id="parcours" class="max-w-4xl mx-auto py-16 px-6">
-    <h2 class="text-2xl font-bold mb-12 text-center text-gray-800">Mon Parcours</h2>
+  <!-- Mon Parcours -->
+  <section id="parcours" class="max-w-4xl mx-auto my-12 py-6 px-6 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
 
-    <div class="relative pl-12">
-      <!-- Ligne verticale -->
-      <div class="absolute top-0 left-6 w-1 h-full bg-blue-500"></div>
-
-      <!-- Étape 1 -->
-      <div class="relative mb-12 flex items-start">
-        <!-- Cercle -->
-        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
-          1
-        </div>
-        <!-- Texte -->
-        <div class="ml-6">
-          <h3 class="text-xl font-semibold text-gray-800">2021 : Bac Scientifique</h3>
-          <p class="text-gray-600 mt-2">
-            Obtention du Bac Scientifique avec mention bien, spécialités Mathématiques - NSI (Numérique et Science de l'Informatique).
-          </p>
-        </div>
-      </div>
-
-      <!-- Étape 2 -->
-      <div class="relative mb-12 flex items-start">
-        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
-          2
-        </div>
-        <div class="ml-6">
-          <h3 class="text-xl font-semibold text-gray-800">2021-2023 : Classe Préparatoire MPSI - MP</h3>
-          <p class="text-gray-600 mt-2">
-            Deux années de prépa axés sur la Mathématiques et la Physique au lycée Robespierre d'Arras.
-          </p>
-        </div>
-      </div>
-
-      <!-- Étape 3 -->
-      <div class="relative mb-12 flex items-start">
-        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
-          3
-        </div>
-        <div class="ml-6">
-          <h3 class="text-xl font-semibold text-gray-800">2023-2026 : Cycle ingénieur - Informatique et Système d'Information</h3>
-          <p class="text-gray-600 mt-2">
-            ...
-          </p>
-        </div>
-      </div>
+    <div class="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
+      <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Mon parcours</h2>
     </div>
+
+    <ol class="relative mx-auto my-12 max-w-2xl border-s-[3px] border-gray-200 dark:border-gray-700">
+
+      <li class="mb-10 ms-6">
+        <span
+          class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 dark:bg-blue-900">
+          <svg class="w-4 h-4 text-blue-800 dark:text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+          </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">
+          Cycle ingénieur - Université de Technologie de Troyes (UTT)
+          <span
+            class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300 ms-3">Actuellement</span>
+        </h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          Depuis Septembre 2023
+        </time>
+        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          3 années de cycle ingénieur en branche Informatique et Système d'Information à l'UTT.
+        </p>
+      </li>
+
+      <li class="mb-10 ms-6">
+        <span
+          class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 dark:bg-blue-900">
+          <svg class="w-4 h-4 text-blue-800 dark:text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+          </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">
+          Classe préparatoire aux grandes écoles - MPSI - MP
+        </h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          De Septembre 2021 à Juillet 2023
+        </time>
+        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">.</p>
+      </li>
+
+      <li class="mb-10 ms-6">
+        <span
+          class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 dark:bg-blue-900">
+          <svg class="w-4 h-4 text-blue-800 dark:text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+          </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">
+          Bac Scientifique Mathématique - Numérique et Science de l'Information
+        </h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          Depuis Septembre 2022
+        </time>
+        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          .
+        </p>
+      </li>
+
+    </ol>
+
   </section>
 
+  <!-- Mes experiences -->
+  <section id="experiences" class="max-w-6xl mx-auto my-12 py-6 px-6 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
 
-
-
-      <!-- Mes expériences -->
-<section id="experiences" class="max-w-4xl mx-auto py-16 px-6">
-  <h2 class="text-2xl font-bold mb-12 text-center text-gray-800">Mes expériences</h2>
-
-  <div class="relative pl-12">
-    <!-- Ligne verticale -->
-    <div class="absolute top-0 left-6 w-1 h-full bg-orange-500"></div>
-
-    <!-- Etape 1 : Semestre a l'etranger -->
-    <div class="relative mb-12 flex items-start">
-      <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
-        🌍
-      </div>
-      <div class="ml-6">
-        <h3 class="text-xl font-semibold text-gray-800">2025 : Semestre à l’étranger</h3>
-        <p class="text-gray-600 mt-2">
-          Semestre académique à The University of Tokyo, Japan. 
-        </p>
-      </div>
+    <div class="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
+      <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Mes expériences</h2>
     </div>
 
-    <!-- Etape 2 : Stage entreprise -->
-    <div class="relative mb-12 flex items-start">
-      <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold shadow-md flex-shrink-0">
-        💼
-      </div>
-      <div class="ml-6">
-        <h3 class="text-xl font-semibold text-gray-800">2025 : Stage en entreprise</h3>
-        <p class="text-gray-600 mt-2">
-          Stage de 6 mois chez GIMA SAS avec pour mission de développer une application de contrôle qualité en milieu de production. 
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    <ol class="sm:flex items-start my-12">
 
+      <li class="relative mb-6 sm:mb-0 flex-1">
+        <div class="flex items-center">
+          <div
+            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full dark:bg-blue-900 sm:ring-8">
+            <svg class="w-4 h-4 text-blue-800 dark:text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+            </svg>
+          </div>
+          <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+        </div>
+        <div class="mt-3 sm:pe-8">
+          <h3 class="text-lg font-semibold text-gray-900">
+            Stage en entreprise - GIMA SAS Beauvais
+          </h3>
+          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            De Septembre 2024 à Fevrier 2025
+          </time>
+          <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+            Stage de 6 mois chez GIMA SAS avec pour mission de développer une application web de contrôle qualité en
+            milieu de production.
+          </p>
+          <a href="#" class="inline-flex font-medium items-center text-blue-600 hover:underline">
+            Plus de details (Coming Soon)
+            <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 18 18">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+            </svg>
+          </a>
+        </div>
+      </li>
+
+      <li class="relative mb-6 sm:mb-0 flex-1">
+        <div class="flex items-center">
+          <div
+            class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full dark:bg-blue-900 sm:ring-8">
+            <svg class="w-4 h-4 text-blue-800 dark:text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+            </svg>
+
+          </div>
+          <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+        </div>
+        <div class="mt-3 sm:pe-8">
+          <h3 class="text-lg font-semibold text-gray-900">
+            Semestre d'étude à l'étranger - Université de Tokyo
+          </h3>
+          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            De Avril 2025 à Août 2025
+          </time>
+          <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+            Semestre académique à
+            <a href="https://www.u-tokyo.ac.jp/en/index.html"
+              class="inline-flex font-medium items-center text-blue-600 hover:underline">The University of Tokyo au
+              Japon</a>.
+          </p>
+        </div>
+      </li>
+
+    </ol>
+
+
+  </section>
 
   <!-- Projets -->
-  <section id="projects" class="max-w-7xl mx-auto py-16 px-6">
-    <h2 class="text-2xl font-bold mb-8 text-center">Mes projets</h2>
-    
-    <div class="flex items-center relative">
-      <!-- Bouton gauche -->
-      <button id="prev" class="absolute -left-14 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white text-3xl px-4 py-2 rounded-full hover:bg-opacity-90 z-10">
-        &#10094;
-      </button>
+  <section id="projects" class="max-w-7xl mx-auto px-6 py-6 rounded-2xl overflow-hidden shadow-lg bg-gray-100">
 
-<!-- Carrousel -->
-<div class="overflow-hidden w-full">
-  <div id="carousel-track" class="flex space-x-8 transition-transform duration-500 ease-in-out">
-
-    <!-- Card 1 -->
-    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div class="flex h-full">
-        <div class="w-1/2 bg-gray-200">
-          <img src="https://via.placeholder.com/400x400?text=Projet+1" alt="Projet 1" class="w-full h-full object-cover">
-        </div>
-        <div class="w-1/2 p-8 flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold mb-4">Projet Portfolio Web</h3>
-          <p class="text-gray-600">
-            Création d’un site web personnel avec HTML, CSS et JavaScript. J’ai mis en pratique les concepts de responsive design et d’animation CSS.
-          </p>
-          <strong>
-            PAS À JOUR
-          </strong>
-        </div>
-      </div>
+    <div class="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
+      <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Mes projets</h2>
     </div>
 
-    <!-- Card 2 -->
-    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div class="flex h-full">
-        <div class="w-1/2 bg-gray-200">
-          <img src="https://via.placeholder.com/400x400?text=Projet+2" alt="Projet 2" class="w-full h-full object-cover">
-        </div>
-        <div class="w-1/2 p-8 flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold mb-4">...</h3>
-          <p class="text-gray-600">
-            ...
-          </p>
-                    <strong>
-            PAS À JOUR
-          </strong>
-        </div>
+    <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-xl font-bold mb-4">Mes Projets</h2>
+        <ul id="project-list" class="space-y-3">
+        </ul>
       </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div class="flex h-full">
-        <div class="w-1/2 bg-gray-200">
-          <img src="https://via.placeholder.com/400x400?text=Projet+3" alt="Projet 3" class="w-full h-full object-cover">
+      <div class="md:col-span-2 bg-white rounded-lg shadow p-6">
+        <div id="project-details">
+          <p class="text-gray-500">Cliquez sur un projet pour voir les détails 👈</p>
         </div>
-        <div class="w-1/2 p-8 flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold mb-4">...</h3>
-          <p class="text-gray-600">
-           ...
-          </p>
-                    <strong>
-            PAS À JOUR
-          </strong>
-        </div>
+        
       </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div class="flex h-full">
-        <div class="w-1/2 bg-gray-200">
-          <img src="https://via.placeholder.com/400x400?text=Projet+4" alt="Projet 4" class="w-full h-full object-cover">
-        </div>
-        <div class="w-1/2 p-8 flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold mb-4">...</h3>
-          <p class="text-gray-600">
-            ...
-          </p>
-                    <strong>
-            PAS À JOUR
-          </strong>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="flex-shrink-0 w-[800px] h-[400px] bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div class="flex h-full">
-        <div class="w-1/2 bg-gray-200">
-          <img src="https://via.placeholder.com/400x400?text=Projet+5" alt="Projet 5" class="w-full h-full object-cover">
-        </div>
-        <div class="w-1/2 p-8 flex flex-col justify-center">
-          <h3 class="text-2xl font-semibold mb-4">...</h3>
-          <p class="text-gray-600">
-            ...
-          </p>
-                    <strong>
-            PAS À JOUR
-          </strong>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-      <!-- Bouton droit -->
-      <button id="next" class="absolute -right-14 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white text-3xl px-4 py-2 rounded-full hover:bg-opacity-90 z-10">
-        &#10095;
-      </button>
     </div>
   </section>
 
@@ -233,10 +213,11 @@
       📧 Email : <a href="mailto:hugo.czerniak@utt.fr" class="text-orange-500 hover:underline">hugo.czerniak@utt.fr</a>
     </p>
     <p class="mb-4">
-      🔗 LinkedIn : <a href="https://www.linkedin.com/in/hugo-czerniak/" target="_blank" class="text-orange-500 hover:underline">Mon LinkedIn</a>
+      🔗 LinkedIn : <a href="https://www.linkedin.com/in/hugo-czerniak/" target="_blank"
+        class="text-orange-500 hover:underline">Mon LinkedIn</a>
     </p>
     <!-- <p>
-      💻 GitHub : <a href="https://github.com/ton-github" target="_blank" class="text-orange-500 hover:underline">Mon GitHub</a>
+      💻 GitHub : <a href="https://github.com/HugoCnk" target="_blank" class="text-orange-500 hover:underline">Mon GitHub</a>
     </p> -->
   </section>
 
@@ -244,47 +225,6 @@
   <footer class="bg-gray-900 text-gray-400 text-center py-6">
     <p>© 2025 Hugo CZERNIAK - Portfolio Étudiant</p>
   </footer>
-
-  <!-- Script -->
-  <script>
-    const track = document.getElementById('carousel-track');
-    const slides = track.children;
-    const nextBtn = document.getElementById('next');
-    const prevBtn = document.getElementById('prev');
-
-    let currentIndex = 0;
-    const gap = 32; // space-x-8 = 2rem = 32px
-
-    function updateCarousel() {
-      const cardWidth = slides[0].offsetWidth + gap;
-      const trackWidth = track.parentElement.offsetWidth;
-      
-      // Calcul du max index pour ne pas dépasser la dernière card
-      const maxIndex = slides.length - Math.floor(trackWidth / cardWidth);
-      
-      // Boucle infinie
-      if (currentIndex > maxIndex) {
-        currentIndex = 0;
-      } else if (currentIndex < 0) {
-        currentIndex = maxIndex;
-      }
-
-      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex++;
-      updateCarousel();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex--;
-      updateCarousel();
-    });
-
-    // Ajuste le carrousel si la fenêtre change de taille
-    window.addEventListener('resize', updateCarousel);
-
-  </script>
 </body>
+
 </html>
