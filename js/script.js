@@ -26,8 +26,16 @@ function showProject(id) {
     </div>
   `).join("");
 
+  // Badge "Terminé" ou "En cours"
+  const statusBadge = proj.finished
+    ? `<span class="inline-block bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Terminé</span>`
+    : `<span class="inline-block bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full">En cours</span>`;
+
   document.getElementById("project-details").innerHTML = `
-    <h2 class="text-2xl font-bold mb-4">${proj.title}</h2>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-2xl font-bold">${proj.title}</h2>
+      ${statusBadge}
+    </div>
 
     <div id="custom-carousel" class="relative w-full mb-4 overflow-hidden">
       <div class="relative h-64 md:h-96">
@@ -47,6 +55,7 @@ function showProject(id) {
   // Initialise le carrousel custom
   initCustomCarousel("custom-carousel", 4000);
 }
+
 
 // Carrousel custom simple
 function initCustomCarousel(carouselId, interval = 3000) {

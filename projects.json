@@ -13,7 +13,8 @@
                 "Unity",
                 "C#",
                 "Blender"
-            ]
+            ],
+            "finished": true
         },
         {
             "id": "p2",
@@ -28,7 +29,8 @@
                 "Unity",
                 "C#",
                 "Unity Shader"
-            ]
+            ],
+            "finished": true
         },
         {
             "id": "p3",
@@ -43,7 +45,8 @@
             "skills": [
                 "Java",
                 "MVC"
-            ]
+            ],
+            "finished": true
         },
         {
             "id": "p4",
@@ -58,7 +61,37 @@
                 "Bootstrap",
                 "MVC",
                 "SQL"
-            ]
+            ],
+            "finished": true
+        },
+        {
+            "id": "p5",
+            "title": "🎥 GreenTube",
+            "description": "Réalisation d'un Youtube plus éco-responsable.",
+            "images": [
+                
+            ],
+            "skills": [
+                "HTML",
+                "React"
+            ],
+            "finished": false
+        },
+        {
+            "id": "p6",
+            "title": "🎮 Jeu de stratégie",
+            "description": "",
+            "images": [
+                "./assets/images/projects/game_strat/game_menu.png",
+                "./assets/images/projects/game_strat/game_playing.png"
+            ],
+            "skills": [
+                "Unity",
+                "C#"
+            ],
+            "finished": false
         }
+
+
     ]
 }
