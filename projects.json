@@ -3,7 +3,7 @@
         {
             "id": "p1",
             "title": "🦠 Simulation de propagation d'un virus dans une ville",
-            "description": "",
+            "description": "Premier grand projet réalisé sur Unity, simulant la propagation d’un virus au sein d’une population urbaine. Développement complet du système de simulation, incluant la gestion des déplacements, des interactions et des paramètres de contagion.",
             "images": [
                 "./assets/images/projects/sim_virus/sv_menu.png",
                 "./assets/images/projects/sim_virus/sv_playing.png",
@@ -19,7 +19,7 @@
         {
             "id": "p2",
             "title": "🌊 Simulation de fluide E-MPS en temps réelle",
-            "description": "",
+            "description": "Réalisation d’une simulation de particules de fluide basée sur la méthode E-MPS. Utilisation de shaders Unity pour améliorer le rendu visuel et représenter le comportement du fluide de façon crédible.",
             "images": [
                 "./assets/images/projects/sim_fluide/sf_particle.jpg",
                 "./assets/images/projects/sim_fluide/sf_shader_off.jpg",
@@ -35,7 +35,7 @@
         {
             "id": "p3",
             "title": "🃏 Jeu de carte 'Karmaka'",
-            "description": "",
+            "description": "Adaptation du jeu de plateau Karmaka, développée en Java avec un MVC simplifié. Conception d’une interface utilisateur graphique et d’une logique de cartes à effets, première approche structurée du développement orienté modèle–vue–contrôleur.",
             "images": [
                 "./assets/images/projects/karmaka/kar_menu.png",
                 "./assets/images/projects/karmaka/kar_plateau.png",
@@ -51,7 +51,7 @@
         {
             "id": "p4",
             "title": "💰 Site de gestion de patrimoine",
-            "description": "",
+            "description": "Développement d’un site de gestion de patrimoine en HTML / PHP, permettant de comprendre le fonctionnement complet d’une application web : requêtes serveur, gestion côté client et interaction avec une base de données.",
             "images": [
                 "./assets/images/projects/patrimoine/pat_menu.png"
             ],
@@ -67,7 +67,7 @@
         {
             "id": "p5",
             "title": "🎥 GreenTube",
-            "description": "Réalisation d'un Youtube plus éco-responsable.",
+            "description": "Reproduction de YouTube dans une version plus écoresponsable, développée avec React. Projet axé sur l’optimisation des ressources et la réduction de l’impact environnementale des services web.",
             "images": [
                 
             ],
@@ -80,7 +80,7 @@
         {
             "id": "p6",
             "title": "🎮 Jeu de stratégie",
-            "description": "",
+            "description": "Développement d’un jeu de stratégie sous Unity, avec pour objectif d’obtenir une architecture claire et modulaire. Projet conçu pour expérimenter différentes fonctionnalités d’Unity, ScriptableObjects, MonoBehaviours, systèmes d’animation et gestion avancée des menus, tout en travaillant sur un design d’interface soigné.",
             "images": [
                 "./assets/images/projects/game_strat/game_menu.png",
                 "./assets/images/projects/game_strat/game_playing.png"
