@@ -1,5 +1,25 @@
 let currentProject = null;
 
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('scrollTopBtn');
+  if (!btn) return; 
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('hidden', window.scrollY < 200);
+  });
+
+  window.scrollToTop = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  loadProjects()
+});
+
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 async function loadProjects() {
   const res = await fetch('./projects.json');
   const data = await res.json();
@@ -20,11 +40,14 @@ function showProject(id) {
   if (!proj) return;
 
   // Génère le HTML des slides
-  const imageSlides = proj.images.map((img) => `
-    <div class="absolute inset-0 transition-opacity duration-700 opacity-0" data-slide>
-      <img src="${img}" class="w-full h-64 md:h-96 object-cover rounded-lg" alt="${proj.title}">
-    </div>
-  `).join("");
+  const imageSlides = (proj.images && proj.images.length > 0 ? proj.images : ["./assets/images/wip.png"])
+    .map((img) => `
+      <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-700 opacity-0" data-slide>
+        <img src="${img}" class="max-h-full max-w-full object-contain rounded-lg bg-neutral-100" alt="${proj.title}">
+      </div>
+    `).join("");
+
+
 
   // Badge "Terminé" ou "En cours"
   const statusBadge = proj.finished
@@ -52,12 +75,10 @@ function showProject(id) {
     </ul>
   `;
 
-  // Initialise le carrousel custom
   initCustomCarousel("custom-carousel", 4000);
 }
 
 
-// Carrousel custom simple
 function initCustomCarousel(carouselId, interval = 3000) {
   const carousel = document.getElementById(carouselId);
   if (!carousel) return;
@@ -94,5 +115,3 @@ function initCustomCarousel(carouselId, interval = 3000) {
   showSlide(0);
   startTimer();
 }
-
-document.addEventListener("DOMContentLoaded", loadProjects);
