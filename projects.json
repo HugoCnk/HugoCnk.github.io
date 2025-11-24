@@ -98,8 +98,9 @@
       "description": "Projet de découverte du développement d’une application multi module sous Android. Application contenant plusieurs mini jeu différents.",
       "images": [
         "./assets/images/projects/android_arcade/home.jpg",
-        "./assets/images/projects/android_arcade/home_dialog.jpg",
-        "./assets/images/projects/android_arcade/ttt.jpg"
+        "./assets/images/projects/android_arcade/p4_dialog.jpg",
+        "./assets/images/projects/android_arcade/ttt_win.jpg",
+        "./assets/images/projects/android_arcade/draughts.jpg"
       ],
       "skills": [
         "Kotlin",
@@ -107,6 +108,21 @@
         "MVVM"
       ],
       "finished": false
+    },
+    {
+      "id": "p8",
+      "title": "⛅ HugoMeteo - Mon Application Météo",
+      "description": "Application météo qui interroge une API pour afficher en temps réel la température, les conditions actuelles et les prévisions d’une ville choisie.",
+      "images": [
+        "./assets/images/projects/meteo/meteo_n.jpg"
+      ],
+      "skills": [
+        "React Native",
+        "TypeScript",
+        "Expo",
+        "API"
+      ],
+      "finished": true
     }
 
 
