@@ -114,6 +114,7 @@
       "title": "⛅ HugoMeteo - Mon Application Météo",
       "description": "Application météo qui interroge une API pour afficher en temps réel la température, les conditions actuelles et les prévisions d’une ville choisie.",
       "images": [
+        "./assets/images/projects/meteo/meteo_d.jpg",
         "./assets/images/projects/meteo/meteo_n.jpg"
       ],
       "skills": [
